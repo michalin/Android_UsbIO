@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">USB-LED</string>
+    <string name="NO_USB">No valid USB device detected. Connect a FT232R compatible device</string>
+    <string name="retry">Retry</string>
+</resources>

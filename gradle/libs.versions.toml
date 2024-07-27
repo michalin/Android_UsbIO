@@ -1,0 +1,27 @@
+[versions]
+agp = "8.5.1"
+appcompatV7 = "28.0.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.6.0"
+material = "1.11.0"
+activity = "1.8.2"
+constraintlayout = "2.1.4"
+usbserial = "6.1.0"
+
+[libraries]
+appcompat-v7 = { module = "com.android.support:appcompat-v7", version.ref = "appcompatV7" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+usb-serial-for-android = { module = "com.github.mik3y:usb-serial-for-android", version = "3.7.3" }
+usbserial = { module = "com.github.felHR85:UsbSerial", version.ref = "usbserial" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+
