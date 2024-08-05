@@ -82,8 +82,8 @@ public class UsbIOService extends Service{
     /*static {
         System.loadLibrary("usbcontrol");
     }*/
-    public native void csetup();
-    public native void cloop();
+    //public native void csetup();
+    //public native void cloop();
 
     @Override
     public void onCreate() {
@@ -190,7 +190,7 @@ public class UsbIOService extends Service{
         private boolean isRunning;
         private int _pins = 0;
         private byte _rdvals = (byte)0xFF;
-        private byte[] rdvals = {0};
+        private final byte[] rdvals = {0};
         Handler mHandler = new Handler();
         private final LoopThread loopThread = new LoopThread();
 
@@ -210,14 +210,14 @@ public class UsbIOService extends Service{
                     int bang_val = (BITMODE_SYNCBB << 8) + writeval;
                     if (mUsbDevConnection.controlTransfer(FTDI_DEVICE_OUT_REQTYPE, SIO_SET_BITMODE_REQUEST, bang_val, mUsbInterface.getId(), null, 0, 0) == -1) {
                         Log.e(TAG, "Error, could not write pin");
-                        isRunning = false;;
+                        isRunning = false;
                     }
                 }
 
                 //Read from FT232R ports
                 if(mUsbDevConnection.controlTransfer(FTDI_DEVICE_IN_REQTYPE, SIO_READ_PINS_REQUEST, 0, mUsbInterface.getId(), rdvals, 1, 0) == -1) {
                     Log.e(TAG,"Error, could not read pin");
-                    isRunning = false;;
+                    isRunning = false;
                 }
                 rdvals[0] = (byte) (rdvals[0] & ~mMode);
                 if(rdvals[0] != _rdvals){
