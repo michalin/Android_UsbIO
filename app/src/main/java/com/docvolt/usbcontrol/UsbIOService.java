@@ -42,8 +42,8 @@ public class UsbIOService extends Service{
     private static final int PRODUCT_ID = 0x6001;
 
     // The Lower 8 Bits represent the FT232 IO values. The upper 24 bits represent virtual IO values used by the app
-    private static final AtomicInteger mPins = new AtomicInteger(0xFF00); //Output
-    private static int mMode = 0xFF00; //Input mode {INPUT | OUTPUT}
+    private static final AtomicInteger mPins = new AtomicInteger(0xFFFFFF00); //Output
+    private static int mMode = 0xFFFFFF00; //Input mode {INPUT | OUTPUT}
 
     // USB control constants
     private static final int FTDI_DEVICE_OUT_REQTYPE = 0x40;
