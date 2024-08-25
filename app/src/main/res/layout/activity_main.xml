@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cb_rsd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:rotationX="1"
+    app:layout_anchorGravity="bottom|clip_horizontal|right"
+    tools:context=".MainActivity">
+
+    <ToggleButton
+        android:id="@+id/btn_txd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:checked="false"
+        android:textColor="@color/btn_txd"
+        android:textOff="@string/txd_off"
+        android:textOn="@string/txd_on"
+        app:layout_constraintBottom_toTopOf="@+id/btn_dtr"
+        app:layout_constraintEnd_toStartOf="@+id/cb_txd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ToggleButton
+        android:id="@+id/btn_dtr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/btn_dtr"
+        android:textOff="@string/dtr_off"
+        android:textOn="@string/dtr_on"
+        app:layout_constraintBottom_toTopOf="@+id/btn_rts"
+        app:layout_constraintEnd_toEndOf="@+id/btn_txd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_txd"
+        app:layout_constraintTop_toBottomOf="@+id/btn_txd" />
+
+    <ToggleButton
+        android:id="@+id/btn_rts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/btn_rts"
+        android:textOff="@string/rts_off"
+        android:textOn="@string/rts_on"
+        app:layout_constraintBottom_toTopOf="@+id/btn_rxd"
+        app:layout_constraintEnd_toEndOf="@+id/btn_dtr"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_dtr"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dtr" />
+
+    <ToggleButton
+        android:id="@+id/btn_rxd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/btn_rxd"
+        android:textOff="@string/rxd_off"
+        android:textOn="@string/rxd_on"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="@+id/btn_rts"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_rts"
+        app:layout_constraintTop_toBottomOf="@+id/btn_rts" />
+
+    <CheckBox
+        android:id="@+id/cb_txd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_txd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_txd" />
+
+    <CheckBox
+        android:id="@+id/cb_dtr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_dtr"
+        app:layout_constraintEnd_toEndOf="@+id/cb_txd"
+        app:layout_constraintStart_toStartOf="@+id/cb_txd"
+        app:layout_constraintTop_toTopOf="@+id/btn_dtr" />
+
+    <CheckBox
+        android:id="@+id/cb_rts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_rts"
+        app:layout_constraintEnd_toEndOf="@+id/cb_dtr"
+        app:layout_constraintStart_toStartOf="@+id/cb_dtr"
+        app:layout_constraintTop_toTopOf="@+id/btn_rts" />
+
+    <CheckBox
+        android:id="@+id/cb_rxd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_rxd"
+        app:layout_constraintEnd_toEndOf="@+id/cb_rts"
+        app:layout_constraintStart_toStartOf="@+id/cb_rts"
+        app:layout_constraintTop_toTopOf="@+id/btn_rxd"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/output"
+        app:layout_constraintEnd_toEndOf="@+id/btn_txd"
+        app:layout_constraintStart_toStartOf="@+id/btn_txd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blink"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/cb_txd"
+        app:layout_constraintStart_toStartOf="@+id/cb_txd"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_rxd" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="@string/speed"
+        app:layout_constraintBottom_toBottomOf="@+id/sb_speed"
+        app:layout_constraintEnd_toStartOf="@+id/sb_speed"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sb_speed" />
+
+    <SeekBar
+        android:id="@+id/sb_speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:max="250"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <RadioButton
+        android:id="@+id/rb_ri"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:checked="true"
+        android:clickable="false"
+        android:text="@string/ri"
+        app:layout_constraintEnd_toStartOf="@+id/rb_dsr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sb_speed" />
+
+    <RadioButton
+        android:id="@+id/rb_dsr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:clickable="false"
+        android:text="@string/dsr"
+        app:layout_constraintBottom_toBottomOf="@+id/rb_ri"
+        app:layout_constraintEnd_toStartOf="@+id/rb_dcd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rb_ri"
+        app:layout_constraintTop_toTopOf="@+id/rb_ri" />
+
+    <RadioButton
+        android:id="@+id/rb_dcd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:clickable="false"
+        android:text="@string/dcd"
+        app:layout_constraintBottom_toBottomOf="@+id/rb_dsr"
+        app:layout_constraintEnd_toStartOf="@+id/rb_cts"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rb_dsr"
+        app:layout_constraintTop_toTopOf="@+id/rb_dsr" />
+
+    <RadioButton
+        android:id="@+id/rb_cts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:checked="true"
+        android:clickable="false"
+        android:text="@string/cts"
+        app:layout_constraintBottom_toBottomOf="@+id/rb_dcd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rb_dcd"
+        app:layout_constraintTop_toTopOf="@+id/rb_dcd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

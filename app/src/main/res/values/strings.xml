@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">USB-LED</string>
+    <string name="NO_USB">No valid USB device detected. Connect a FT232R compatible device</string>
+    <string name="retry">Retry</string>
+    <string name="output">Output</string>
+    <string name="blink">Blink</string>
+    <string name="speed">Speed</string>
+    <string name="ri">RI</string>
+    <string name="dsr">DSR</string>
+    <string name="dcd">DCD</string>
+    <string name="cts">CTS</string>
+    <string name="rxd_off">RXD OFF</string>
+    <string name="rxd_on">RXD ON</string>
+    <string name="rts_on">RTS ON</string>
+    <string name="rts_off">RTS OFF</string>
+    <string name="dtr_on">DTR ON</string>
+    <string name="dtr_off">DTR OFF</string>
+    <string name="txd_on">TXD ON</string>
+    <string name="txd_off">TXD OFF</string>
+</resources>
