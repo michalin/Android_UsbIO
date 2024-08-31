@@ -78,12 +78,13 @@ Then connect the device to your computer via USB. A dialog will appear asking if
 <img src="./images/app-start.png" width=1024>   
 
 ### Download the app to the Target Device over WLAN
-Constantly plugging and unplugging the computer and FTDI module is quite impractical when programming the app. Fortunately, however, there is the option of loading apps via WLAN. This means that the USB interface can remain connected to the FTDI module while you can conveniently load and debug your app on the device via Android Studio. And this is how it is set up:
-Add the Android Debug Bridge (ADB) directory to the system path. This can be done either in the control panel or in a power shell (with admin rights). Enter the following there: 
-`[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Program Files\android-sdk\platform-tools", "Machine")`
+Constantly plugging and unplugging the computer and FTDI module is quite impractical when programming the app. Fortunately, however, there is the option of loading apps via WLAN. This means that the USB interface can remain connected to the FTDI module while you can conveniently load and debug your app on the device via Android Studio. To set it up, first
+add the Android Debug Bridge (ADB) directory to the path variable. 
+The Android Debug Bridge (ADB) command line tool is part of the Android SDK that allows developers to install apps, debug, transfer files and comprehensively manage Android devices. It is located under `C:\Users\{username}\AppData\Local\Android\Sdk\platform-tools\adb.exe`
 
-The Android Debug Bridge (ADB) command line tool included in the Android SDK that allows developers to install apps, debug, transfer files and comprehensively manage Android devices. It is located under `C:\Program Files\android-sdk\platform-tools\adb.exe` 
- `C:\Program Files\android-sdk\platform-tools\adb.exe` 
+Adding ADB to the Path variable can either be done in the control panel or in the terminal window of Android Studio. Enter the following there: 
+`[Environment]::SetEnvironmentVariable("PATH",$Env:PATH+";$Env:LOCALAPPDATA\Android\Sdk\platform-tools",[EnvironmentVariableTarget]::"User")`
+
 
 Now connect your mobile device to the computer via USB and enter `adb tcpip 5555`. Make sure that your computer and the device are in the same WLAN network and enter `adb connect <IP address>`. The adb is now connected via WLAN.
 This is particularly convenient with the integrated terminal of Android Studio.

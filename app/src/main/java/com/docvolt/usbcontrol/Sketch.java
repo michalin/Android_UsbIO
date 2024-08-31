@@ -19,8 +19,7 @@ public class Sketch {
     void loop() {
         for (byte outPin : mOutPins) {
             int delay = MAX_DELAY - analogRead(VPORT_ANALOG);
-            if(digitalRead(outPin + VPIN_BASE) == 1)
-            {
+            if(digitalRead(outPin + VPIN_BASE) == 1)            {
                 digitalWrite(outPin, digitalRead(VPIN_BASE + outPin));
                 delay(2*delay);
                 digitalWrite(outPin, 0);
