@@ -84,7 +84,7 @@ The Android Debug Bridge (ADB) command line tool is part of the Android SDK that
 
 Adding ADB to the Path variable can either be done in the control panel or in the terminal window of Android Studio. Enter the following there: 
 `[Environment]::SetEnvironmentVariable("PATH",$Env:PATH+";$Env:LOCALAPPDATA\Android\Sdk\platform-tools",[EnvironmentVariableTarget]::"User")`
-
+After that you need to restart Android Studio to apply the changes.
 
 Now connect your mobile device to the computer via USB and enter `adb tcpip 5555`. Make sure that your computer and the device are in the same WLAN network and enter `adb connect <IP address>`. The adb is now connected via WLAN.
 This is particularly convenient with the integrated terminal of Android Studio.
