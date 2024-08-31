@@ -55,11 +55,11 @@ Download Android Studio from https://developer.android.com/studio. The following
 
 After you have installed Android Studio and the Android SDK, you will see the following dialog box when you launch it for the first time:
 
-<img src="./images/welcome.png" width=1024>
+<img src="./images/welcome.png" width=512>
 
 There you click on "Get from VCS" and enter the following URL: https://github.com/michalin/Android_UsbIO (This repository)
 
-<img src="./images/clone.jpg" width=1024>
+<img src="./images/clone.jpg" width=512>
 
 > “Git” must be installed in order to carry out this step. If you see the message “Git is not installed”, use the “Download and Install” link to install it. 
 
